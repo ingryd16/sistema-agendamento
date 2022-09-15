@@ -22,10 +22,14 @@ public class ClinicaApp {
 		PlanoDeSaude planoBradesco = new PlanoDeSaude();
 		planoBradesco.setOperadora("bradesco");
 		planoBradesco.setTipoDoPlano("ouro");
+		
+		System.out.println(planoBradesco.getOperadora());
+		System.out.println(planoBradesco.getTipoDoPlano());
+		System.out.println(planoBradesco.getDadosDoPlano());
+
 		JOptionPane.showMessageDialog(null, planoBradesco.getOperadora());
 		JOptionPane.showMessageDialog(null, planoBradesco.getTipoDoPlano());
 		JOptionPane.showMessageDialog(null, planoBradesco.getDadosDoPlano());
-
 	}
 
 }
