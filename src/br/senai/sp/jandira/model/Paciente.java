@@ -67,11 +67,11 @@ public class Paciente {
 	}
 
 	// get/set sexo
-	public Generos getSexo() {
+	public Generos getgGeneros() {
 		return genero;
 	}
 
-	public void setSexo(Generos genero) {
+	public void setGenero(Generos genero) {
 		this.genero = genero;
 	}
 

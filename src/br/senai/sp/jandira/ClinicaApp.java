@@ -67,7 +67,7 @@ public class ClinicaApp {
 		Medico medico1 = new Medico();
 		medico1.setNome("Ana Paula");
 		medico1.setCrm("8956-78");
-		medico1.setGeneros(Generos.FEMININO);
+		medico1.setGenero(Generos.FEMININO);
 		medico1.setDataDeNascimento(LocalDate.of(1997, 5, 15));
 		// a dra ana é clinica geral e fisioterapeuta
 		Especialidade[] especialidades = { especialidade3, especialidade5 };
@@ -78,7 +78,7 @@ public class ClinicaApp {
 		Medico medico2 = new Medico();
 		medico2.setNome("Pedro Oliveira");
 		medico2.setCrm("8696-30");
-		medico2.setSexo("Masculino");
+		medico2.setGenero(Generos.MASCULINO);
 		medico2.setDataDeNascimento(LocalDate.of(1984, 8, 20));
 		// é clinico geral, fisioterapeuta e cardiologista
 		Especialidade[] especialidades2 = { especialidade3, especialidade5, especialidade1 };
@@ -92,7 +92,7 @@ public class ClinicaApp {
 		paciente1.setNome("Ingryd Shirlley");
 		paciente1.setPlanoDeSaude(plano1);
 		paciente1.setRg("52.463.646-1");
-		paciente1.setGenero("Feminino");
+		paciente1.setGenero(Generos.FEMININO);
 		paciente1.setTelefone("11949676202");
 		paciente1.setTipoSanguineo("A+");
 
@@ -102,7 +102,7 @@ public class ClinicaApp {
 		paciente2.setRg("50.128.581-7");
 		paciente2.setCpf("451.022.128.26");
 		paciente2.setTelefone("(11)97136-4704");
-		paciente2.setSexo("Feminino");
+		paciente2.setGenero(Generos.FEMININO);
 		paciente2.setTipoSanguineo("O+");
 		paciente2.setPlanoDeSaude(plano2);
 		paciente2.setEndereco(endereco2);
@@ -129,7 +129,7 @@ public class ClinicaApp {
 
 		System.out.println("");
 		System.out.println("");
-		System.out.println("------------AGENDA:-------------");
+		System.out.println("------------AGENDA 1:-------------");
 		System.out.println("NOME: " + agenda1.getPaciente().getNome());
 		System.out.println("ESPECIALIDADE: " + agenda1.getEspecialidade().getNome());
 		System.out.println("MEDICO: " + agenda1.getMedico().getNome());
@@ -146,7 +146,7 @@ public class ClinicaApp {
 		agenda2.setPaciente(paciente2);
 		
 		System.out.println("");
-		System.out.println("------------AGENDA:-------------");
+		System.out.println("------------AGENDA 2:-------------");
 		System.out.println("NOME: " + agenda2.getPaciente().getNome());
 		System.out.println("ESPECIALIDADE: " + agenda2.getEspecialidade().getNome());
 		System.out.println("MEDICO: " + agenda2.getMedico().getNome());

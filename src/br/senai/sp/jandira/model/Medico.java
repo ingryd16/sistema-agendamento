@@ -27,13 +27,13 @@ public class Medico {
 		this.dataDeNascimento = dataDeNascimento;
 	}
 
-	//set/get sexo
-	public String getSexo() {
+	//set/get genero
+	public Generos getGenero() {
 		return genero;
 	}
 
-	public void setSexo(String sexo) {
-		this.genero = sexo;
+	public void setGenero(Generos genero) {
+		this.genero = genero;
 	}
 	
 	//set/get especialidades
