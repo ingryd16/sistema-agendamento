@@ -3,6 +3,20 @@ package br.senai.sp.jandira.model;
 public class PlanoDeSaude {
 	private String operadora;
 	private String tipoDoPlano;
+	
+	//Método construtor
+	public PlanoDeSaude () {
+	}
+	
+	public PlanoDeSaude (String operadora) {
+		this.operadora = operadora;
+	}
+	
+	public PlanoDeSaude (String operadora, String tipoDoPlano) {
+		this.operadora = operadora;
+		this.tipoDoPlano = tipoDoPlano;
+	}
+	
 
 	// Métodos de acesso
 	public void setOperadora(String operadora) {
@@ -25,5 +39,5 @@ public class PlanoDeSaude {
 		return "Plano: " + this.operadora + ", " + this.tipoDoPlano;
 
 	}
-
+	
 }
