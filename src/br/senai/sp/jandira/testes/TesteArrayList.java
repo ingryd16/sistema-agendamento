@@ -46,19 +46,90 @@
  */
 package br.senai.sp.jandira.testes;
 
-import br.senai.sp.jandira.dao.PlanoDeSaudeDAO;
+import java.util.ArrayList;
+
+import br.senai.sp.jandira.model.Especialidade;
 import br.senai.sp.jandira.model.PlanoDeSaude;
 
 public class TesteArrayList {
-		public static void main(String[] args) { 
-			PlanoDeSaude plano1 = new PlanoDeSaude("Amil", "Basic");
-			PlanoDeSaude plano2 = new PlanoDeSaude("Allianz", "Bronze");
-			
-			PlanoDeSaudeDAO dao = new PlanoDeSaudeDAO ();
-			dao.gravar(plano1);
-			dao.gravar(plano2);
+	public static void main(String[] args) {
+		PlanoDeSaude plano1 = new PlanoDeSaude("Amil", "Basic");
+		PlanoDeSaude plano2 = new PlanoDeSaude("Allianz", "Bronze");
+		PlanoDeSaude plano3 = new PlanoDeSaude("Unimed", "Prata");
+		PlanoDeSaude plano4 = new PlanoDeSaude("Notredame", "Advanced");
 
+		ArrayList<PlanoDeSaude> planos = new ArrayList<>();
+		planos.add(plano1);
+		planos.add(plano2);
+		planos.add(plano3);
+		planos.add(plano4);
+		planos.add(plano1);
+		planos.add(plano3);
 
-			
-			System.out.println(dao.listarTodos());
-}}
+		// looping while
+		System.out.println("********** WHILE **********");
+		int i = 0;
+		while (i < planos.size()) {
+			System.out.println(planos.get(i).getOperadora());
+			i++;
+		}
+		System.out.println("-----------------");
+		System.out.println("Saiu do looping!!");
+		System.out.println("");
+		System.out.println("");
+
+		// looping for
+		// for (contador;condição;acumulador){
+		// }
+
+		System.out.println("********** FOR **********");
+		for (int contador = 0; contador < planos.size(); contador++) {
+			System.out.println(planos.get(contador).getOperadora());
+		}
+		System.out.println("-----------------");
+		System.out.println("Saiu do looping!!");
+		System.out.println("");
+		System.out.println("");
+		
+		//interaçao em listas - arraylist
+		System.out.println("********** FOR EACH **********");
+		for (PlanoDeSaude plano : planos) {
+			System.out.println(plano.getOperadora());
+		}
+		System.out.println("-----------------");
+		System.out.println("Saiu do looping!!");
+		System.out.println("");
+		System.out.println("");
+		
+		//criar 3 especialidades e guarda-las em um arraylist. exibir o nome usando for each
+		Especialidade e1 = new Especialidade();
+		e1.setNome("Cardiologista");
+		e1.setDescricao("Cuida do coração");
+		
+		Especialidade e2 = new Especialidade();
+		e2.setNome("Otorrino");
+		e2.setDescricao("Cuida do ouvido");
+		
+		Especialidade e3 = new Especialidade();
+		e3.setNome("Fisioterapia");
+		e3.setDescricao("Cuida dos ossos");
+		
+		ArrayList<Especialidade> especialidades = new ArrayList<>();
+		especialidades.add(e1);
+		especialidades.add(e2);
+		especialidades.add(e3);
+		
+		System.out.println("********** TESTE **********");
+		for (Especialidade e : especialidades) {
+			System.out.printf(e.getNome(), e.getDescricao());
+		}
+		System.out.println("-----------------");
+		System.out.println("Saiu do looping!!");
+		System.out.println("");
+		System.out.println("");
+		
+		
+		
+		
+	}
+}

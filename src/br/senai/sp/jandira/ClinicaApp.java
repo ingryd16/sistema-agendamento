@@ -40,7 +40,7 @@ public class ClinicaApp {
 		plano1.setTipoDoPlano("Bronze");
 
 		PlanoDeSaude plano2 = new PlanoDeSaude("Bradesco", "Ouro");
-		
+
 		PlanoDeSaude plano3 = new PlanoDeSaude("Amil");
 
 		// endereços
@@ -133,10 +133,10 @@ public class ClinicaApp {
 		System.out.println("NOME: " + agenda1.getPaciente().getNome());
 		System.out.println("ESPECIALIDADE: " + agenda1.getEspecialidade().getNome());
 		System.out.println("MEDICO: " + agenda1.getMedico().getNome());
-		System.out.println("DATA: " + agenda1.getDataDaConsulta() +" - "+ agenda1.getHoraDaConsulta());
+		System.out.println("DATA: " + agenda1.getDataDaConsulta() + " - " + agenda1.getHoraDaConsulta());
 		System.out.println("OBSERVAÇÃO: " + agenda1.getObservacao());
 		System.out.println("PLANO: " + agenda1.getPaciente().getPlanoDeSaude().getOperadora());
-		
+
 		Agenda agenda2 = new Agenda();
 		agenda2.setEspecialidade(especialidade1);
 		agenda2.setDataDaConsulta(LocalDate.of(2022, 9, 26));
@@ -144,19 +144,18 @@ public class ClinicaApp {
 		agenda2.setMedico(medico2);
 		agenda2.setObservacao("O paciente é asmático.");
 		agenda2.setPaciente(paciente2);
-		
+
 		System.out.println("");
 		System.out.println("------------AGENDA 2:-------------");
 		System.out.println("NOME: " + agenda2.getPaciente().getNome());
 		System.out.println("ESPECIALIDADE: " + agenda2.getEspecialidade().getNome());
 		System.out.println("MEDICO: " + agenda2.getMedico().getNome());
-		System.out.println("DATA: " + agenda2.getDataDaConsulta() +" - "+ agenda2.getHoraDaConsulta());
+		System.out.println("DATA: " + agenda2.getDataDaConsulta() + " - " + agenda2.getHoraDaConsulta());
 		System.out.println("OBSERVAÇÃO: " + agenda2.getObservacao());
 		System.out.println("PLANO: " + agenda2.getPaciente().getPlanoDeSaude().getOperadora());
-		
-		
+
 		System.out.println("PLANO: " + plano3.getOperadora());
-		
+
 	}
 
 }

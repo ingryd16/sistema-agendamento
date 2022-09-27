@@ -38,6 +38,4 @@ public class PlanoDeSaude {
 	public String getDadosDoPlano() {
 		return "Plano: " + this.operadora + ", " + this.tipoDoPlano;
 
-	}
-	
-}
+	}}

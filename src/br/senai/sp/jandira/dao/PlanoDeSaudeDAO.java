@@ -4,23 +4,22 @@ import java.util.ArrayList;
 
 import br.senai.sp.jandira.model.PlanoDeSaude;
 
-public class PlanoDeSaudeDAO {
+public class PlanoDeSaudeDAO { //SIMULAR NOSS0 BANCO DE DADOS
 	private PlanoDeSaude planoDeSaude;
-	private ArrayList<PlanoDeSaude> planos = new ArrayList<>();
-	
-	public PlanoDeSaudeDAO (PlanoDeSaude planoDeSaude) {
+	private static ArrayList<PlanoDeSaude> planos = new ArrayList<>();
+
+	public PlanoDeSaudeDAO(PlanoDeSaude planoDeSaude) {
 		this.planoDeSaude = planoDeSaude;
 	}
-	
+
 	public PlanoDeSaudeDAO() {
-		planos.add(planoDeSaude);
 	}
 
 	public void gravar(PlanoDeSaude planoDeSaude) {
 		planos.add(planoDeSaude);
 	}
-	
-	public ArrayList<PlanoDeSaude> listarTodos () {
+
+	public static ArrayList<PlanoDeSaude> listarTodos() {
 		return planos;
 	}
 }
